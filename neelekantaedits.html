@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0d13">
+  <meta name="description" content="Neelakanta Edits by Gowtham Reddy — video editing,photo editing, reels, wedding films, photo retouching, thumbnails, motion graphics and more.">
+  <title>Neelakanta Edits | Video, Photo & Creative Editing</title>
+  <style>
+    :root {
+      --bg: #0d0d13;
+      --panel: #17171f;
+      --panel-2: #20202b;
+      --white: #f6f4f8;
+      --muted: #b5b1c0;
+      --line: rgba(255,255,255,.12);
+      --purple: #a58bff;
+      --pink: #fa78b8;
+      --green: #51dbac;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; background: var(--bg); color: var(--white); font-family: var(--font); line-height: 1.65; }
+    body, button, input, select, textarea { font-family: var(--font); }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topline { padding: 8px 0; background: #09090d; color: #d7d2df; font-size: .82rem; }
+    .topline-inner { display: flex; justify-content: space-between; gap: 12px; }
+    .topline a:hover, .nav a:hover, .footer-links a:hover { color: var(--pink); }
+    header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: rgba(13,13,19,.94); backdrop-filter: blur(15px); }
+    .nav { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-size: 1.1rem; font-weight: 850; letter-spacing: -.04em; }
+    .brand-icon { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 12px; background: linear-gradient(135deg,var(--purple),var(--pink)); color: #17111e; font-weight: 950; }
+    .brand span:last-child small { display: block; color: var(--muted); font-size: .65rem; font-weight: 650; letter-spacing: .13em; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: .9rem; font-weight: 650; }
+    .menu-button { display: none; border: 0; background: none; font-size: 1.6rem; cursor: pointer; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 11px 19px; border: 1px solid transparent; border-radius: 8px; background: linear-gradient(100deg,var(--purple),var(--pink)); color: #15111d; font-weight: 800; cursor: pointer; transition: transform .18s, filter .18s; }
+    .button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .button.secondary { border-color: var(--line); background: var(--panel-2); color: var(--white); }
+    .button.green { background: var(--green); }
+    .button.small { min-height: 38px; padding: 7px 12px; font-size: .84rem; }
+    .hero { position: relative; overflow: hidden; padding: 100px 0 88px; background: radial-gradient(ellipse at 78% 20%, rgba(165,139,255,.23), transparent 37%), radial-gradient(ellipse at 87% 76%, rgba(250,120,184,.14), transparent 35%); }
+    .hero::after { position: absolute; top: 10%; right: -100px; width: 400px; height: 400px; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.018),0 0 0 110px rgba(255,255,255,.012); content: ""; pointer-events: none; }
+    .hero-copy { position: relative; z-index: 1; max-width: 760px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border: 1px solid rgba(165,139,255,.35); border-radius: 99px; background: rgba(165,139,255,.08); color: #d5caff; font-size: .81rem; font-weight: 700; }
+    h1,h2,h3,p { margin-top: 0; }
+    h1 { margin: 22px 0; font-size: clamp(3.2rem,8vw,6.4rem); line-height: .98; letter-spacing: -.075em; }
+    h1 span { background: linear-gradient(100deg,var(--purple),var(--pink)); background-clip: text; color: transparent; }
+    .hero-copy > p { max-width: 640px; color: var(--muted); font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 48px; color: #d6d2de; font-size: .85rem; }
+    .hero-tags span { padding: 8px 12px; border: 1px solid var(--line); border-radius: 99px; background: rgba(255,255,255,.035); }
+    .section { padding: 82px 0; }
+    .section.alt { border-block: 1px solid var(--line); background: #121219; }
+    .section-title { max-width: 680px; margin-bottom: 34px; }
+    .kicker { margin-bottom: 9px; color: var(--pink); font-size: .78rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    h2 { margin-bottom: 12px; font-size: clamp(2.25rem,5vw,3.45rem); line-height: 1.05; letter-spacing: -.055em; }
+    h3 { margin-bottom: 8px; font-size: 1.2rem; letter-spacing: -.02em; }
+    .section-title > p:last-child, .muted { color: var(--muted); }
+    .grid { display: grid; gap: 17px; }
+    .services { grid-template-columns: repeat(3,1fr); }
+    .service, .package, .review, .portfolio-item { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+    .service { padding: 24px; transition: transform .18s,border-color .18s; }
+    .service:hover { transform: translateY(-4px); border-color: rgba(165,139,255,.55); }
+    .service-icon { display: grid; width: 46px; height: 46px; margin-bottom: 18px; place-items: center; border-radius: 13px; background: linear-gradient(135deg,rgba(165,139,255,.2),rgba(250,120,184,.16)); font-size: 1.4rem; }
+    .service p, .package p { margin-bottom: 0; color: var(--muted); font-size: .91rem; }
+    .portfolio { grid-template-columns: repeat(3,1fr); }
+    .portfolio-item { min-height: 245px; display: flex; align-items: end; overflow: hidden; background: linear-gradient(0deg,rgba(8,8,12,.92),rgba(8,8,12,.03)), radial-gradient(ellipse at 80% 18%,rgba(250,120,184,.5),transparent 35%), linear-gradient(135deg,#35304d,#171720 60%,#2c2040); }
+    .portfolio-item:nth-child(2) { background-image: linear-gradient(0deg,rgba(8,8,12,.92),rgba(8,8,12,.03)),radial-gradient(ellipse at 20% 20%,rgba(81,219,172,.4),transparent 38%),linear-gradient(135deg,#1c3437,#191823 60%,#30243e); }
+    .portfolio-item:nth-child(3) { background-image: linear-gradient(0deg,rgba(8,8,12,.92),rgba(8,8,12,.03)),radial-gradient(ellipse at 75% 18%,rgba(165,139,255,.48),transparent 40%),linear-gradient(135deg,#2b2141,#181821 60%,#402935); }
+    .portfolio-caption { padding: 20px; }
+    .portfolio-caption span { color: #d0cbd8; font-size: .84rem; }
+    .packages { grid-template-columns: repeat(3,1fr); }
+    .package { padding: 24px; }
+    .package.featured { border-color: var(--purple); box-shadow: 0 0 35px rgba(165,139,255,.12); }
+    .price { margin: 15px 0; color: var(--purple); font-size: 1.35rem; font-weight: 850; }
+    .package ul { display: grid; gap: 8px; padding-left: 20px; color: var(--muted); font-size: .9rem; }
+    .review-grid { grid-template-columns: repeat(3,1fr); }
+    .review { padding: 23px; }
+    .review p { color: var(--muted); font-style: italic; }
+    .review strong { font-size: .88rem; }
+    .order-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-items: start; }
+    .contact-card, .order-card, .owner-card { padding: 25px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+    .contact-line { margin: 20px 0; }
+    .contact-line strong { display: block; color: var(--purple); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; }
+    .contact-line a:hover { color: var(--pink); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 6px; }
+    .field.full { grid-column: 1/-1; }
+    label { font-size: .85rem; font-weight: 750; }
+    input,select,textarea { width: 100%; min-height: 45px; padding: 10px 12px; border: 1px solid #393744; border-radius: 7px; outline: none; background: #101017; color: var(--white); }
+    input:focus,select:focus,textarea:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(165,139,255,.13); }
+    textarea { min-height: 110px; resize: vertical; }
+    .help { color: var(--muted); font-size: .79rem; }
+    .payment-box { margin: 16px 0; padding: 14px; border-left: 3px solid var(--green); border-radius: 5px; background: rgba(81,219,172,.07); color: #d5e8e1; font-size: .84rem; }
+    .status { min-height: 25px; margin: 12px 0 0; color: var(--green); font-size: .9rem; }
+    .owner { display: none; }
+    .owner.visible { display: block; }
+    .owner-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin: 22px 0 15px; }
+    .owner-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .order-list { display: grid; gap: 12px; }
+    .order-row { padding: 17px; border: 1px solid var(--line); border-radius: 10px; background: #101017; }
+    .order-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+    .order-meta { color: var(--muted); font-size: .84rem; }
+    .order-description { white-space: pre-wrap; overflow-wrap: anywhere; color: #dedbe4; }
+    .order-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+    .order-controls select { width: auto; min-width: 145px; }
+    .remove-button { border: 1px solid rgba(250,120,184,.4); border-radius: 6px; background: transparent; color: #ff9bc9; padding: 8px 11px; cursor: pointer; }
+    footer { padding: 42px 0 20px; border-top: 1px solid var(--line); background: #09090d; }
+    .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; padding-bottom: 26px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; color: var(--muted); }
+    .fineprint { padding-top: 17px; border-top: 1px solid var(--line); color: #9995a4; font-size: .79rem; }
+    .whatsapp { position: fixed; z-index: 9; right: 18px; bottom: 18px; display: grid; width: 56px; height: 56px; place-items: center; border: 2px solid #d9fff0; border-radius: 50%; background: #16a765; color: white; box-shadow: 0 8px 28px #0008; font-weight: 900; }
+    @media(max-width:850px) {
+      .services,.portfolio,.review-grid,.packages { grid-template-columns: repeat(2,1fr); }
+      .order-layout { grid-template-columns: 1fr; }
+    }
+    @media(max-width:640px) {
+      .container { width: calc(100% - 30px); }
+      .topline-inner { justify-content: center; text-align: center; }
+      .topline-inner span:first-child { display: none; }
+      .nav { min-height: 64px; }
+      .menu-button { display: block; }
+      .nav-links { position: absolute; top: 100%; right: 0; left: 0; display: none; align-items: stretch; padding: 12px 20px 18px; border-bottom: 1px solid var(--line); background: #111118; }
+      .nav-links.open { display: flex; flex-direction: column; gap: 0; }
+      .nav-links a:not(.button) { padding: 10px 0; }
+      .nav-links .button { margin-top: 10px; }
+      .hero { padding: 74px 0 60px; }
+      .section { padding: 65px 0; }
+      .services,.portfolio,.review-grid,.packages { grid-template-columns: 1fr; }
+      .portfolio-item { min-height: 215px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .contact-card,.order-card { padding: 20px; }
+      .button { width: 100%; }
+      .owner-toolbar .button { width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="container topline-inner">
+      <span>Independent creative editing studio · Available for new projects</span>
+      <span><a href="tel:+916383377448">63833 77448</a> &nbsp;|&nbsp; <a href="tel:+916364527841">63645 27841</a></span>
+    </div>
+  </div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Neelakanta Edits home">
+        <span class="brand-icon">NE</span><span>NEELAKANTA EDITS<small>STORIES, CUT WITH CARE</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navigation">☰</button>
+      <nav class="nav-links" id="navigation" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#work">Portfolio</a><a href="#packages">Packages</a><a href="#about">About</a><a href="#order" class="button small">Place an Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-copy">
+        <span class="badge">✦ Creative editing for every story</span>
+        <h1>Your idea.<br>Our edit.<br><span>Made unforgettable.</span></h1>
+        <p>Video and photo editing for creators, couples, brands, and businesses. From a quick social reel to a full event film, let's make something people want to watch.</p>
+        <div class="actions"><a class="button" href="#order">Start Your Order <span aria-hidden="true">&nbsp;→</span></a><a class="button secondary" href="#work">Explore Our Work</a></div>
+        <div class="hero-tags"><span>🎬 Video editing</span><span>📱 Reels & shorts</span><span>📸 Photo retouching</span><span>✨ Motion graphics</span></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="services">
+      <div class="container">
+        <div class="section-title"><p class="kicker">What we edit</p><h2>All kinds of editing. One creative studio.</h2><p>Tell us what you need, share your footage or images, and we'll work with you to shape the final result.</p></div>
+        <div class="grid services">
+          <article class="service"><div class="service-icon">🎞️</div><h3>YouTube & Long-Form Video</h3><p>Clean cuts, pacing, audio cleanup, color correction, titles, and exports for your channel or business.</p></article>
+          <article class="service"><div class="service-icon">📱</div><h3>Reels, Shorts & TikTok</h3><p>Vertical edits with captions, engaging cuts, transitions, music sync, and platform-ready delivery.</p></article>
+          <article class="service"><div class="service-icon">💍</div><h3>Wedding & Event Films</h3><p>Highlights and full-length edits that bring together your favourite moments, speeches, and music.</p></article>
+          <article class="service"><div class="service-icon">🖼️</div><h3>Photo Editing & Retouching</h3><p>Portrait retouching, color and exposure correction, product photos, cleanup, and image enhancement.</p></article>
+          <article class="service"><div class="service-icon">🎨</div><h3>Graphic Design & Thumbnails</h3><p>Eye-catching thumbnails, social posts, banners, covers, and graphics tailored to your brand.</p></article>
+          <article class="service"><div class="service-icon">✨</div><h3>Motion Graphics & VFX</h3><p>Animated titles, logo reveals, visual effects, explainer elements, and polished branded content.</p></article>
+          <article class="service"><div class="service-icon">🎙️</div><h3>Audio & Podcast Editing</h3><p>Dialogue cleanup, noise reduction, podcast edits, audio leveling, and music or sound-effect mixing.</p></article>
+          <article class="service"><div class="service-icon">🛍️</div><h3>Ads & Product Content</h3><p>Promotional edits and product videos for online stores, campaigns, launches, and local businesses.</p></article>
+          <article class="service"><div class="service-icon">🎨</div><h3>Color Grading & Other Edits</h3><p>Give existing footage a consistent look—or ask about any other editing job you have in mind.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-title"><p class="kicker">Selected work</p><h2>A preview of the creative direction</h2><p>Replace these sample project tiles with your actual work, video links, and before-and-after images.</p></div>
+        <div class="grid portfolio">
+          <article class="portfolio-item"><div class="portfolio-caption"><h3>Event highlight film</h3><span>Story-driven video · Add your project link</span></div></article>
+          <article class="portfolio-item"><div class="portfolio-caption"><h3>Social-first reel</h3><span>Vertical short-form · Add your project link</span></div></article>
+          <article class="portfolio-item"><div class="portfolio-caption"><h3>Brand & product edit</h3><span>Commercial creative · Add your project link</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="packages">
+      <div class="container">
+        <div class="section-title"><p class="kicker">Simple starting points</p><h2>Choose a package—or request a custom quote</h2><p>Final pricing depends on footage length, complexity, delivery time, and revisions. Confirm the price with the editor before paying.</p></div>
+        <div class="grid packages">
+          <article class="package"><h3>Quick Social Edit</h3><div class="price">Ask for a quote</div><p>For a single reel, short, or simple promotional clip.</p><ul><li>Short-form vertical edit</li><li>Basic titles and music sync</li><li>One revision round</li></ul><a class="button secondary" href="#order">Request this package</a></article>
+          <article class="package featured"><span class="badge">Popular request</span><h3 style="margin-top:17px">Creator Video</h3><div class="price">Ask for a quote</div><p>For regular content creators and growing brands.</p><ul><li>Long-form video or content bundle</li><li>Polished cuts and audio cleanup</li><li>Titles and color correction</li></ul><a class="button" href="#order">Request this package</a></article>
+          <article class="package"><h3>Event Story</h3><div class="price">Ask for a quote</div><p>For weddings, celebrations, and memorable occasions.</p><ul><li>Highlights from supplied footage</li><li>Music-led storytelling</li><li>Custom delivery format</li></ul><a class="button secondary" href="#order">Request this package</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title"><p class="kicker">Meet your editor</p><h2>Creative work with a personal touch.</h2><p><strong>Neelakanta Edits</strong> is owned by <strong>A. Gowtham Reddy</strong>. Every project starts by understanding your audience, style, and deadline. You get direct communication, thoughtful editing, and a chance to review the result.</p><p>Share your footage through a file-sharing link after we confirm the order. Please don't upload private or sensitive material unless it's needed for the project.</p></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="reviews">
+      <div class="container">
+        <div class="section-title"><p class="kicker">Kind words</p><h2>Client reviews</h2><p>Replace these placeholders with genuine reviews only after receiving permission from each customer.</p></div>
+        <div class="grid review-grid">
+          <article class="review"><p>“Add a real customer review about their video, photo, or editing experience here.”</p><strong>Customer name · Project type</strong></article>
+          <article class="review"><p>“Use this space for honest feedback shared with permission by a client.”</p><strong>Customer name · Project type</strong></article>
+          <article class="review"><p>“Replace this sample text with a genuine testimonial—do not present placeholder reviews as real.”</p><strong>Customer name · Project type</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="container">
+        <div class="section-title"><p class="kicker">Let's get started</p><h2>Tell us about your order.</h2><p>Send a project enquiry with the details below. We'll discuss the scope, price, timeline, and payment with you.</p></div>
+        <div class="order-layout">
+          <aside class="contact-card">
+            <h3>Contact Neelakanta Edits</h3><p class="muted">Owner: A. Gowtham Reddy</p>
+            <div class="contact-line"><strong>Call / WhatsApp</strong><a href="tel:+916383377448">+91 63833 77448</a></div>
+            <div class="contact-line"><strong>Alternate contact</strong><a href="tel:+916364527841">+91 63645 27841</a></div>
+            <a class="button green" href="https://wa.me/916383377448?text=Hello%20Neelakanta%20Edits%2C%20I%27d%20like%20to%20discuss%20an%20editing%20order." target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+            <div class="payment-box"><strong>Payments:</strong> You requested payment to 6383377448. A phone number alone may not be a valid UPI ID. Confirm your exact UPI ID with your payment app, then use your official payment app or payment link. This page does not collect card details or claim payment is complete.</div>
+          </aside>
+          <div class="order-card">
+            <h3>Project order form</h3>
+            <p class="muted">Submitting saves the order in this browser and opens WhatsApp with the order details for you to send.</p>
+            <form id="order-form">
+              <div class="form-grid">
+                <div class="field"><label for="customer-name">Your name *</label><input id="customer-name" name="name" autocomplete="name" maxlength="100" required></div>
+                <div class="field"><label for="customer-phone">WhatsApp / phone *</label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required></div>
+                <div class="field"><label for="customer-email">Email</label><input id="customer-email" name="email" type="email" autocomplete="email" maxlength="150"></div>
+                <div class="field"><label for="editing-type">Editing service *</label>
+                  <select id="editing-type" name="service" required>
+                    <option value="">Choose an editing service</option><option>Video editing</option><option>Reels / Shorts / TikTok</option><option>Wedding / event film</option><option>Photo editing / retouching</option><option>Thumbnail / graphic design</option><option>Motion graphics / VFX</option><option>Audio / podcast editing</option><option>Advertisement / product video</option><option>Color grading</option><option>Other editing</option>
+                  </select>
+                </div>
+                <div class="field"><label for="deadline">Preferred deadline</label><input id="deadline" name="deadline" type="date"></div>
+                <div class="field"><label for="budget">Budget (optional)</label><input id="budget" name="budget" maxlength="60" placeholder="Your approximate budget"></div>
+                <div class="field full"><label for="project-details">Project details *</label><textarea id="project-details" name="details" maxlength="2500" required placeholder="Describe the edit, footage length, style references, aspect ratio, and any special requests."></textarea></div>
+                <div class="field"><label for="delivery">Delivery format</label><input id="delivery" name="delivery" maxlength="80" placeholder="e.g. 1080p vertical MP4"></div>
+                <div class="field"><label for="payment-method">Payment preference</label><select id="payment-method" name="payment"><option>Discuss after quote</option><option>UPI (confirm details with owner)</option><option>Bank transfer (after invoice)</option><option>Secure payment link (after quote)</option></select></div>
+              </div>
+              <div class="payment-box">No payment is charged here. The owner will confirm availability and the final price, then share verified payment details. Never enter a UPI PIN, password, or card number on this website.</div>
+              <button class="button" type="submit">Save order &amp; open WhatsApp</button>
+              <p id="order-status" class="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="owner">
+      <div class="container">
+        <div class="section-title"><p class="kicker">For the owner</p><h2>Order dashboard</h2><p>Saved orders on this browser and device. Customer orders are not automatically synchronized here from their devices.</p></div>
+        <div class="owner-card">
+          <button class="button secondary" type="button" id="owner-toggle" aria-expanded="false">Show locally saved orders</button>
+          <div class="owner" id="owner-panel">
+            <div class="owner-toolbar"><strong id="order-count">0 orders</strong><div class="owner-actions"><button class="button small secondary" type="button" id="export-orders">Export JSON</button><button class="button small secondary" type="button" id="clear-orders">Clear orders</button></div></div>
+            <p class="help">Orders appear here only when submitted in this same browser. WhatsApp orders sent by customers should be received in your WhatsApp chat.</p>
+            <div class="order-list" id="order-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top"><a class="brand" href="#home"><span class="brand-icon">NE</span><span>NEELAKANTA EDITS<small>OWNED BY A. GOWTHAM REDDY</small></span></a><nav class="footer-links" aria-label="Footer links"><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#packages">Packages</a><a href="#order">Place an order</a><a href="#owner">Owner dashboard</a></nav></div>
+      <div class="fineprint">© <span id="year"></span> Neelakanta Edits. All rights reserved. Portfolio tiles, package descriptions, and reviews are editable sample content. Orders are stored locally in this browser; use WhatsApp or connect a backend service to receive and sync orders online.</div>
+    </div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/916383377448?text=Hello%20Neelakanta%20Edits" target="_blank" rel="noopener noreferrer" aria-label="Contact Neelakanta Edits on WhatsApp">WA</a>
+
+  <script>
+    "use strict";
+    const OWNER_WHATSAPP = "916383377448";
+    const STORAGE_KEY = "neelakanta-edits-orders-v1";
+    const form = document.querySelector("#order-form");
+    const statusMessage = document.querySelector("#order-status");
+    const orderList = document.querySelector("#order-list");
+    const ownerPanel = document.querySelector("#owner-panel");
+    const ownerToggle = document.querySelector("#owner-toggle");
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector("#navigation");
+    menuButton.addEventListener("click", () => {
+      const open = navigation.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      menuButton.textContent = open ? "×" : "☰";
+    });
+    navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      navigation.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open menu");
+      menuButton.textContent = "☰";
+    }));
+
+    function getOrders() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        if (!Array.isArray(stored)) throw new Error("Saved order data has an invalid format.");
+        return stored;
+      } catch (error) {
+        if (error instanceof SyntaxError) throw new Error("Saved orders could not be read. Export or clear the damaged browser data.");
+        throw error;
+      }
+    }
+
+    function saveOrders(orders) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(orders));
+    }
+
+    function element(tag, text, className) {
+      const node = document.createElement(tag);
+      if (text !== undefined) node.textContent = text;
+      if (className) node.className = className;
+      return node;
+    }
+
+    function renderOrders() {
+      let orders;
+      try {
+        orders = getOrders().sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+      } catch (error) {
+        orderList.replaceChildren(element("p", error.message, "help"));
+        document.querySelector("#order-count").textContent = "Orders unavailable";
+        return;
+      }
+      document.querySelector("#order-count").textContent = `${orders.length} ${orders.length === 1 ? "order" : "orders"}`;
+      orderList.replaceChildren();
+      if (!orders.length) {
+        orderList.append(element("p", "No locally saved orders yet.", "help"));
+        return;
+      }
+
+      for (const order of orders) {
+        const card = element("article", undefined, "order-row");
+        const top = element("div", undefined, "order-top");
+        top.append(element("strong", `${order.name} · ${order.service}`));
+        top.append(element("span", new Date(order.createdAt).toLocaleString(), "order-meta"));
+        card.append(top);
+        card.append(element("p", `Phone: ${order.phone} · Email: ${order.email || "Not provided"} · Deadline: ${order.deadline || "Flexible"} · Budget: ${order.budget || "Not provided"} · Format: ${order.delivery || "Not specified"} · Payment: ${order.payment}`, "order-meta"));
+        card.append(element("p", order.details, "order-description"));
+
+        const controls = element("div", undefined, "order-controls");
+        const statusLabel = element("label", "Status");
+        const statusSelect = document.createElement("select");
+        statusSelect.setAttribute("aria-label", `Status for order from ${order.name}`);
+        ["New", "Contacted", "In progress", "Completed", "Cancelled"].forEach((value) => {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = value;
+          option.selected = (order.status || "New") === value;
+          statusSelect.append(option);
+        });
+        statusSelect.addEventListener("change", () => {
+          try {
+            const latest = getOrders();
+            const matching = latest.find((entry) => entry.id === order.id);
+            if (matching) matching.status = statusSelect.value;
+            saveOrders(latest);
+            renderOrders();
+          } catch (error) {
+            statusMessage.textContent = error.message;
+          }
+        });
+        statusLabel.append(statusSelect);
+        controls.append(statusLabel);
+        const removeButton = element("button", "Delete order", "remove-button");
+        removeButton.type = "button";
+        removeButton.addEventListener("click", () => {
+          if (!window.confirm("Delete this order from this browser?")) return;
+          try {
+            saveOrders(getOrders().filter((entry) => entry.id !== order.id));
+            renderOrders();
+          } catch (error) {
+            statusMessage.textContent = error.message;
+          }
+        });
+        controls.append(removeButton);
+        card.append(controls);
+        orderList.append(card);
+      }
+    }
+
+    ownerToggle.addEventListener("click", () => {
+      const visible = ownerPanel.classList.toggle("visible");
+      ownerToggle.setAttribute("aria-expanded", String(visible));
+      ownerToggle.textContent = visible ? "Hide locally saved orders" : "Show locally saved orders";
+      if (visible) renderOrders();
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const values = Object.fromEntries(new FormData(form).entries());
+      const order = {
+        id: typeof crypto.randomUUID === "function" ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+        createdAt: new Date().toISOString(),
+        status: "New",
+        name: values.name.trim(),
+        phone: values.phone.trim(),
+        email: values.email.trim(),
+        service: values.service,
+        deadline: values.deadline,
+        budget: values.budget.trim(),
+        details: values.details.trim(),
+        delivery: values.delivery.trim(),
+        payment: values.payment
+      };
+      try {
+        const orders = getOrders();
+        orders.push(order);
+        saveOrders(orders);
+      } catch (error) {
+        statusMessage.textContent = `Order was not saved: ${error.message}`;
+        return;
+      }
+
+      const message = [
+        "New Neelakanta Edits order",
+        `Name: ${order.name}`,
+        `Phone: ${order.phone}`,
+        `Email: ${order.email || "Not provided"}`,
+        `Service: ${order.service}`,
+        `Deadline: ${order.deadline || "Flexible"}`,
+        `Budget: ${order.budget || "Not provided"}`,
+        `Delivery format: ${order.delivery || "Not specified"}`,
+        `Payment preference: ${order.payment}`,
+        `Project details: ${order.details}`
+      ].join("\n");
+      statusMessage.textContent = "Order saved in this browser. WhatsApp is opening; press Send there to deliver it to the owner.";
+      renderOrders();
+      window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+      form.reset();
+    });
+
+    document.querySelector("#export-orders").addEventListener("click", () => {
+      try {
+        const file = new Blob([JSON.stringify(getOrders(), null, 2)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(file);
+        link.download = "neelakanta-edits-orders.json";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      } catch (error) {
+        statusMessage.textContent = error.message;
+      }
+    });
+
+    document.querySelector("#clear-orders").addEventListener("click", () => {
+      if (!window.confirm("Permanently clear all locally saved orders from this browser? Export first if you need a backup.")) return;
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+        renderOrders();
+      } catch (error) {
+        statusMessage.textContent = error.message;
+      }
+    });
+  </script>
+</body>
+</html>
